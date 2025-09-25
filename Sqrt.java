@@ -1,14 +1,7 @@
 public class Sqrt {
-    
-    /**
-     * Calculate square root using binary search algorithm
-     * with precision of ±0.01
-     * @param x number to find square root (x >= 0)
-     * @return square root of x with error ±0.01, or -1 if x < 0
-     */
     public static double sqrt(double x) {
         if (x < 0) {
-            return -1; // Return -1 for negative input
+            return -1; // Trả về -1 cho số âm
         }
         
         if (x == 0 || x == 1) {
@@ -26,7 +19,7 @@ public class Sqrt {
             right = x;
         }
         
-        double epsilon = 0.01; // Allowed error
+        double epsilon = 0.01; // Sai số cho phép +- 0.01
         
         // Binary search to find square root
         while (right - left > epsilon) {
@@ -45,7 +38,7 @@ public class Sqrt {
         // Return average of final range
         return (left + right) / 2.0;
     }
-    
+
     public static void main(String[] args) {
         // Test some values
         System.out.println("sqrt(4) = " + sqrt(4));
