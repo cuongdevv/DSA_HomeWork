@@ -1,7 +1,7 @@
 public class SortArray012 {
     
     public static void sort012(int[] arr) {
-      int low = 0; // 2
+      int low = 0; // 2 
       int mid = 0; // 5
       int high = arr.length - 1; // 4
       // 0,0,1,1,1,2,2,2,2
