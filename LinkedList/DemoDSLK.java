@@ -21,5 +21,9 @@ public class DemoDSLK {
 
         // In danh sách liên kết
         myDS.printDSLK();
+        // myDS.removeFirst();
+        myDS.printDSLK();
+        System.out.println(myDS.getFirst());
+        System.out.println(myDS.getLast());
     }
 }

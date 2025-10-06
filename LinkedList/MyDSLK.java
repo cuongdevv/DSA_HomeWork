@@ -20,4 +20,35 @@ public class MyDSLK {
         System.out.println("null");
     }
 
+    void insertFirst(int data) {
+        Node newNode = new Node(data);
+        newNode.next = head;
+        head = newNode;
+        size++;
+    }
+
+    void insertLast(int data) {
+        Node newNode = new Node(data);
+        tail.next = newNode;
+        tail = newNode;
+        size++;
+    }
+
+    void removeFirst() {
+        head = head.next;
+        size--;
+    }
+
+    void removeLast() {
+        tail = tail.next;
+        size--;
+    }
+
+    int getFirst() {
+        return head.data;
+    }
+
+    int getLast() {
+        return tail.data;
+    }
 }
