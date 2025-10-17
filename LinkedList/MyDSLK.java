@@ -39,8 +39,13 @@ public class MyDSLK {
 				size--;
 		}
 
-		void removeLast() { // O(1)
-				tail = tail.next;
+		void removeLast() { // O(n)
+				Node current = head;
+				while (current.next != tail) {
+						current = current.next;
+				}
+				current.next = null;
+				tail = current;
 				size--;
 		}
 

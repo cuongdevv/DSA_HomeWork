@@ -20,10 +20,8 @@ public class DemoDSLK {
 				myDS.size = 3;
 
 				// In danh sách liên kết
+				myDS.insertLast(100);
+				myDS.removeLast();
 				myDS.printDSLK();
-				// myDS.removeFirst();
-				myDS.printDSLK();
-				System.out.println(myDS.getFirst());
-				System.out.println(myDS.getLast());
 		}
 }
