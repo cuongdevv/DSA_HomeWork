@@ -3,25 +3,24 @@ package LinkedList;
 public class DemoDSLK {
 		public static void main(String[] args) {
 				MyDSLK myDS = new MyDSLK();
-				// head = null
-				// tail = null
-				// size = 0
 
-				Node node12 = new Node(12);
-				Node node99 = new Node(99);
-				Node node37 = new Node(37);
+				Node node5 = new Node(5);
+				Node node10 = new Node(10);
+				Node node20 = new Node(20);
+				Node node1 = new Node(1);
 
-				node12.next = node99;
-				node99.next = node37;
-				node37.next = null;
-				// nút đầu của DSLK
-				myDS.head = node12;
-				myDS.tail = node37;
-				myDS.size = 3;
+				node5.next = node10;
+				node10.next = node20;
+				node20.next = node1;
+				node1.next = null;
+
+				myDS.head = node5;
+				myDS.tail = node1;
+
+				myDS.size = 4;
 
 				// In danh sách liên kết
-				myDS.insertLast(100);
-				myDS.removeLast();
 				myDS.printDSLK();
+				System.out.println(myDS.getRandom());
 		}
 }

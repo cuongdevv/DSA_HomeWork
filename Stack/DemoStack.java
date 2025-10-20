@@ -8,7 +8,7 @@ public class DemoStack {
         stack.push(1);
         stack.push(2);
         stack.push(0);
-
+        
         stack.pop();
         stack.pop();
         stack.peek();

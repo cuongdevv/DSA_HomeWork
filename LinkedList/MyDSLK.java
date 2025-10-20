@@ -6,9 +6,9 @@ public class MyDSLK {
 		int size;
 
 		MyDSLK() {
-				head = null;
-				tail = null;
-				size = 0;
+			head = null;
+			tail = null;
+			size = 0;
 		}
 
 		void printDSLK() { // O(n)
@@ -26,7 +26,7 @@ public class MyDSLK {
 				head = newNode;
 				size++;
 		}
-
+		
 		void insertLast(int data) {
 				Node newNode = new Node(data);
 				tail.next = newNode;
@@ -55,5 +55,19 @@ public class MyDSLK {
 
 		int getLast() { // O(1)
 				return tail.data;
+		}
+
+		// Lấy ra một nút bất kỳ (không phải đầu và cuối danh sách)
+		// Độ phức tạp là O(n) vì phải duyệt qua danh sách để tới vị trí bất kỳ.
+		int getRandom() {
+			if (size <= 2) {
+					throw new IllegalStateException("Danh sách quá ngắn, không có nút ở giữa!");
+			}
+			int randomIndex = 1 + (int)(Math.random() * (size - 2)); // từ 1 đến size-2 (bỏ qua head và tail)
+			Node current = head;
+			for (int i = 0; i < randomIndex; i++) {
+				current = current.next;
+			}	
+			return current.data;
 		}
 }
